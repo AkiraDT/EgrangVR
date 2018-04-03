@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.unity3d.vrstandardassets
+    Android: com.PHI.Testing
     Standalone: unity.Unity.VRSamples
     Tizen: com.unity3d.vrstandardassets
     iOS: com.unity3d.vrstandardassets
@@ -166,7 +166,7 @@ PlayerSettings:
   buildNumber:
     iOS: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 24
+  AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 

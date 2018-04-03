@@ -18,7 +18,7 @@ namespace VRStandardAssets.Menu
         [SerializeField] private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded.
         [SerializeField] private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
         [SerializeField] private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
-
+		[SerializeField] private VRInput m_VRInput;
 
         private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
 
@@ -45,6 +45,7 @@ namespace VRStandardAssets.Menu
             m_SelectionRadial.Show();
 
             m_GazeOver = true;
+			m_VRInput.CursorOn ();
         }
 
 
@@ -54,6 +55,7 @@ namespace VRStandardAssets.Menu
             m_SelectionRadial.Hide();
 
             m_GazeOver = false;
+			m_VRInput.CursorOut();
         }
 
 

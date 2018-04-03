@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VRTest.unity
     guid: 62308c6fd2287614091e417820431232
+  - enabled: 0
+    path: Assets/Scenes/combro.unity
+    guid: 362bc01fedcf0614e999c22bd2066238

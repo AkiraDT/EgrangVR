@@ -16,19 +16,19 @@ MonoBehaviour:
     ufoLicenseKey: QWJrTHFoRC8vLy8vQUFBQUtMeFgvbnp1alVjL3ZTWG5vVC9NY2pwazN3b1lYbldsbDZlLzRmVW5JM1J4aXRibnNrVnR0UmtvRHVhUU9OZ3UvRXhFTE5RQjBrZm5MWXFQMEJTd0VKQ2R1ZGgwYUNyRkpqRGtpNXFqdkpraWtyRENxMUE4c2hCNkhoSlRBZmkrbGJ5WXNLTVFxNjVhZEJwSlBJK0RCYlQ2Vmg2YWcrQlgwL3NWMnZTc3ZhQUQ3UkwrRE84K1hUZUtQdUY0YlNzYnJYaS9uenJqY0dJZzFwN293UWVjZUltK29abHFsUHhuUmxjQTRjeWg1ZUJvVUxCU1llUGN2ZHlRbjRFcG5MVnFaMkduWnJlTnI4cXZzekRrT2pBSXhPeDJZd0IwemhlQ1lrVXVNOElyNnVWeFF2MUVGOHpVQng4TUdBZFJndmh4VVBFcE1JTXpiNk9hYzFGNTFJajZHeHA5Y1FjVmFIeGNIQ2YzT0RDTkVmYXo=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
-    useDelayedLoadingObjectTargets: 0
+    maxSimultaneousImageTargets: 2
+    maxSimultaneousObjectTargets: 2
+    useDelayedLoadingObjectTargets: 1
     cameraDirection: 0
     mirrorVideoBackground: 0
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
-    eyewearType: 0
-    stereoFramework: 0
+    eyewearType: 2
+    stereoFramework: 1
     seeThroughConfiguration: 0
-    viewerName: 
-    viewerManufacturer: 
+    viewerName: Cardboard v1
+    viewerManufacturer: Google
     useCustomViewer: 0
     customViewer:
       Version: 0
@@ -44,22 +44,20 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - VuforiaMars_Images
-    - VuforiaMars_VuMark
+    - Egrang_VR
     dataSetsToActivate:
-    - VuforiaMars_Images
-    - VuforiaMars_VuMark
+    - Egrang_VR
   videoBackground:
     clippingMode: 0
     numDivisions: 2
     videoBackgroundShader: {fileID: 15311, guid: 0000000000000000f000000000000000,
       type: 0}
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
-    videoBackgroundEnabled: 1
+    videoBackgroundEnabled: 0
   deviceTracker:
     autoInitTracker: 0
     autoStartTracker: 0
-    trackingMode: 0
+    trackingMode: 1
     posePrediction: 0
     modelCorrectionMode: 0
     modelTransformEnabled: 0
@@ -70,5 +68,5 @@ MonoBehaviour:
   webcam:
     deviceNameSetInEditor: 
     flipHorizontally: 0
-    turnOffWebCam: 1
+    turnOffWebCam: 0
     renderTextureLayer: 30

@@ -53,7 +53,8 @@ namespace VRStandardAssets.Utils
             // Set the default swipe to be none.
             SwipeDirection swipe = SwipeDirection.NONE;
 
-            if (Input.GetButtonDown("Fire1"))
+            
+			if (Input.GetButtonDown("Fire1"))
             {
                 // When Fire1 is pressed record the position of the mouse.
                 m_MouseDownPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -62,6 +63,7 @@ namespace VRStandardAssets.Utils
                 if (OnDown != null)
                     OnDown();
             }
+			
 
             // This if statement is to gather information about the mouse when the button is up.
             if (Input.GetButtonUp ("Fire1"))
@@ -84,6 +86,7 @@ namespace VRStandardAssets.Utils
             // This if statement is to trigger events based on the information gathered before.
             if(Input.GetButtonUp ("Fire1"))
             {
+				
                 // If anything has subscribed to OnUp call it.
                 if (OnUp != null)
                     OnUp();
@@ -106,6 +109,7 @@ namespace VRStandardAssets.Utils
 
                 // Record the time when Fire1 is released.
                 m_LastMouseUpTime = Time.time;
+
             }
 
             // If the Cancel button is pressed and there are subscribers to OnCancel call it.
@@ -115,6 +119,40 @@ namespace VRStandardAssets.Utils
                     OnCancel();
             }
         }
+
+		public void CursorOut(){
+			// If anything has subscribed to OnUp call it.
+			if (OnUp != null)
+				OnUp();
+
+			// If the time between the last release of Fire1 and now is less
+			// than the allowed double click time then it's a double click.
+			if (Time.time - m_LastMouseUpTime < m_DoubleClickTime)
+			{
+				// If anything has subscribed to OnDoubleClick call it.
+				if (OnDoubleClick != null)
+					OnDoubleClick();
+			}
+			else
+			{
+				// If it's not a double click, it's a single click.
+				// If anything has subscribed to OnClick call it.
+				if (OnClick != null)
+					OnClick();
+			}
+
+			// Record the time when Fire1 is released.
+			m_LastMouseUpTime = Time.time;
+		}
+
+		public void CursorOn(){
+			// When Fire1 is pressed record the position of the mouse.
+			m_MouseDownPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+			// If anything has subscribed to OnDown call it.
+			if (OnDown != null)
+				OnDown();
+		}
 
 
         private SwipeDirection DetectSwipe ()
